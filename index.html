@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ripik.ai</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
+</head>
+<body>
+  <div class="topnav">
+    <a class="active" style="float: left; padding: 10px 20px; font-size: 25px;">
+      Model for PGP Plant
+    </a>
+    <a class="active" style="float: right; padding: 15px 20px; font-size: 20px; color: rgb(77, 172, 219);">
+      <img class="logo" src="RipikLogoTransparent.png">
+    </a>
+    <!-- <a class="active" style="float: right; padding: 15px 20px; font-size: 20px; color: rgb(77, 172, 219);">
+      <img class="logo" src="AdityaBirlaTransparent.png">
+    </a> -->
+  </div>
+
+  <div class="container" style="width: 95%; justify-content: space-evenly;">
+    <div style="width: 100%;">
+      <div class="card" id="inputInfo">
+        <h1 style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+          Input Form
+        </h1>
+         <!-- onsubmit="showInfo(); return false" -->
+        <form id="inputForm">
+          <div style="display: inline-flex;"> 
+            <div style="width:100%;">
+              <div class="wrapper">
+                <label>Furnace Pressure:</label><br>
+                <input type="number" step=any name="furnacePressure" id="furnacePressure" required><br>
+              </div>
+              <div class="wrapper">
+                <label>Air to fuel ratio:</label><br>
+                <input type="number" step=any name="airToFuelRatio" id="airToFuelRatio" required><br>
+              </div>
+              <div class="wrapper">
+                <label>Furnace draw:</label><br>
+                <input type="number" step=any name="furnaceDraw" id="furnaceDraw" required><br>
+              </div>
+              <div class="wrapper">
+                <label>Cullet:</label><br>
+                <input type="number" step=any name="cullet" id="cullet" required><br>
+              </div>
+              <div class="wrapper">
+                <label>NCV:</label><br>
+                <input type="number" step=any name="NCV" id="NCV" required><br>
+              </div>
+            </div>
+            <div style="width:80%;">
+              <div class="wrapper">
+                <label>MT Bottom Left Side Temp:</label><br>
+                <input type="number" step=any name="MTBottomLeftTemp" id="MTBottomLeftTemp" value = 0 required><br>
+              </div>
+              <div class="wrapper">
+                <label>MT Bottom Middle Side Temp:</label><br>
+                <input type="number" step=any name="MTBottomMiddleTemp" id="MTBottomMiddleTemp" value = 0 required><br>
+              </div>
+            </div>
+          </div>
+          <!-- <input type="submit" value="Submit"> -->
+          <button type="button" onclick="showInfo(); console.log('Hello'); return false;">Submit</button>
+        </form>
+        <h4 style="float:right; padding: 10px; color: #444;">Powered by Ripik.ai for PGP, Blackstone.</h4>
+      </div>
+      <div class="card" id="outputInfo">
+        <h1 style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+          Model Prediction
+        </h1>
+        <div id="info"></div>
+        <button onclick="resetForm();">Back</button>
+      </div>      
+    </div>
+  </div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
